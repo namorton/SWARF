@@ -1,0 +1,7 @@
+vocabulary bundle <http://mbda-systems.com/swarf/vocabulary/bundle#> as ^bundle {
+	
+	includes <http://mbda-systems.com/swarf/vocabulary/base#>
+	includes <http://mbda-systems.com/swarf/vocabulary/network_endpoint#>
+	includes <http://mbda-systems.com/swarf/vocabulary/weapon_system#>
+
+}

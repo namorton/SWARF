@@ -1,0 +1,49 @@
+[2023-11-14 17:09:39] Server     INFO  Apache Jena Fuseki 4.6.1
+[2023-11-14 17:09:39] Server     INFO  Configuration file: ../.fuseki.ttl
+[2023-11-14 17:09:39] Server     INFO  Path = /swarf
+[2023-11-14 17:09:39] Server     INFO  System
+[2023-11-14 17:09:39] Server     INFO    Memory: 12.0 GiB
+[2023-11-14 17:09:39] Server     INFO    Java:   17.0.8.1
+[2023-11-14 17:09:39] Server     INFO    OS:     Mac OS X 14.1.1 aarch64
+[2023-11-14 17:09:39] Server     INFO    PID:    1304
+[2023-11-14 17:09:39] Server     INFO  Start Fuseki (http=3030)
+[2023-11-14 17:09:41] Fuseki     INFO  [1] GET http://localhost:3030/swarf
+[2023-11-14 17:09:41] Fuseki     INFO  [1] 200 OK (6 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [2] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/vocabulary/weapon_system
+[2023-11-14 17:09:41] Fuseki     INFO  [2] Body: Content-Length=3072, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=19 Triples=19 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [2] 201 Created (33 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [3] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/bundle/properties
+[2023-11-14 17:09:41] Fuseki     INFO  [3] Body: Content-Length=7342, Content-Type=text/turtle, Charset=null => Turtle : Count=80 Triples=80 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [3] 201 Created (14 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [4] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/bundle/individuals
+[2023-11-14 17:09:41] Fuseki     INFO  [4] Body: Content-Length=45681, Content-Type=text/turtle, Charset=null => Turtle : Count=435 Triples=435 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [4] 201 Created (22 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [5] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/bundle/classes
+[2023-11-14 17:09:41] Fuseki     INFO  [5] Body: Content-Length=6532, Content-Type=text/turtle, Charset=null => Turtle : Count=75 Triples=75 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [5] 201 Created (5 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [6] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/interfaces
+[2023-11-14 17:09:41] Fuseki     INFO  [6] Body: Content-Length=12800, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=94 Triples=94 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [6] 201 Created (8 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [7] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/vocabulary/bundle
+[2023-11-14 17:09:41] Fuseki     INFO  [7] Body: Content-Length=2822, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=29 Triples=29 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [7] 201 Created (4 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [8] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/bundle
+[2023-11-14 17:09:41] Fuseki     INFO  [8] Body: Content-Length=1200, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=6 Triples=6 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [8] 201 Created (3 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [9] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/subsystems
+[2023-11-14 17:09:41] Fuseki     INFO  [9] Body: Content-Length=5388, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=34 Triples=34 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [9] 201 Created (3 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [10] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/vocabulary/base
+[2023-11-14 17:09:41] Fuseki     INFO  [10] Body: Content-Length=17963, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=150 Triples=150 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [10] 201 Created (8 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [11] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/description/endpoints
+[2023-11-14 17:09:41] Fuseki     INFO  [11] Body: Content-Length=21200, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=156 Triples=156 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [11] 201 Created (7 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [12] POST http://localhost:3030/swarf?graph=http://mbda-systems.com/swarf/vocabulary/network_endpoint
+[2023-11-14 17:09:41] Fuseki     INFO  [12] Body: Content-Length=25173, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=206 Triples=206 Quads=0
+[2023-11-14 17:09:41] Fuseki     INFO  [12] 201 Created (10 ms)
+[2023-11-14 17:09:41] Fuseki     INFO  [13] GET http://localhost:3030/swarf/sparql?query=PREFIX%20%20nep:%20%20%3Chttp://mbda-systems.com/swarf/vocabulary/network_endpoint%23%3E%0APREFIX%20%20ws:%20%20%20%3Chttp://mbda-systems.com/swarf/vocabulary/weapon_system%23%3E%0APREFIX%20%20base:%20%3Chttp://mbda-systems.com/swarf/vocabulary/base%23%3E%0A%0ASELECT%20DISTINCT%20%20?ss1%20?ss1_name%20?ss2_name%20?ss1_instance%20?ss2_instance%0AWHERE%0A%20%20%7B%20?ss1%20%20a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20ws:Subsystem%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasInstanceName%20%20?ss1_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasInstanceIdentifier%20%20?ss1_instance%20%3B%0A%20%20%20%20%20%20%20%20%20%20nep:connectsTo%20%20%20%20%20%20%20%20_:b0%20.%0A%20%20%20%20_:b0%20%20base:hasInstanceName%20%20?ss2_name%20%3B%0A%20%20%20%20%20%20%20%20%20%20base:hasInstanceIdentifier%20%20?ss2_instance%0A%20%20%7D%0AORDER%20BY%20?ss1_name%20?ss_instance%20?ss2_name%0A
+[2023-11-14 17:09:41] Fuseki     INFO  [13] Query = PREFIX  nep:  <http://mbda-systems.com/swarf/vocabulary/network_endpoint#> PREFIX  ws:   <http://mbda-systems.com/swarf/vocabulary/weapon_system#> PREFIX  base: <http://mbda-systems.com/swarf/vocabulary/base#>  SELECT DISTINCT  ?ss1 ?ss1_name ?ss2_name ?ss1_instance ?ss2_instance WHERE   { ?ss1  a                     ws:Subsystem ;           base:hasInstanceName  ?ss1_name ;           base:hasInstanceIdentifier  ?ss1_instance ;           nep:connectsTo        _:b0 .     _:b0  base:hasInstanceName  ?ss2_name ;           base:hasInstanceIdentifier  ?ss2_instance   } ORDER BY ?ss1_name ?ss_instance ?ss2_name 
+[2023-11-14 17:09:41] Fuseki     INFO  [13] 200 OK (22 ms)
+[2023-11-14 17:10:42] Fuseki     INFO  [14] GET http://localhost:3030/swarf
+[2023-11-14 17:10:42] Fuseki     INFO  [14] 200 OK (64 ms)

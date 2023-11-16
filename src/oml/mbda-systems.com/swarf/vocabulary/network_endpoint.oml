@@ -1,0 +1,79 @@
+vocabulary <http://mbda-systems.com/swarf/vocabulary/network_endpoint#> as network_endpoint {
+
+	extends <http://mbda-systems.com/swarf/vocabulary/base#> as base
+	extends <http://mbda-systems.com/swarf/vocabulary/weapon_system#> as ws
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	@rdfs:comment "A subsystem interface allows subsystems to exchange data."
+	concept NetworkEndpoint < base:IdentifiedElement
+
+	@rdfs:comment "The local host name used for network interface."
+	scalar property localHostName [
+		domain NetworkEndpoint
+		range xsd:string
+	]
+
+	@rdfs:comment "The remote host name used for the network interface."
+	scalar property remoteHostName [
+		domain NetworkEndpoint
+		range xsd:string
+	]
+
+	@rdfs:comment "The local port used for the network interface."
+	scalar property localPort [
+		domain NetworkEndpoint
+		range xsd:positiveInteger
+	]
+
+	@rdfs:comment "The remote port used for the network interface."
+	scalar property remotePort [
+		domain NetworkEndpoint
+		range xsd:positiveInteger
+	]
+
+	@rdfs:comment "The virtual LAN used for the network interface."
+	scalar property virtualLAN [
+		domain NetworkEndpoint
+		range xsd:positiveInteger
+	]
+
+	@rdfs:comment "A Subsystem presents zero or more network endpoints."
+	relation entity Presents [
+		from ws:Subsystem
+		to NetworkEndpoint
+		forward presents
+		reverse isPresentedBy
+		inverse functional
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:comment "An Interface joins two or more NetworkEndpoint(s)."
+	relation entity Interface [
+		from NetworkEndpoint
+		to NetworkEndpoint
+		forward joins
+		symmetric
+		irreflexive
+	] < base:IdentifiedElement
+
+	scalar property isEncrypted [
+		domain Interface
+		range xsd:boolean
+	]
+
+	@rdfs:comment "A Subsystem connects to zero or more Subsystems."
+	relation entity Connection [
+		from ws:Subsystem
+		to ws:Subsystem
+		forward connectsTo
+		symmetric
+	]
+
+	@rdfs:comment "When NetworkEndpoint(s) presented by Subsystems are joined, we infer that the Subsystems are connected."
+	rule Interface-infers-Connection [
+		presents(ss1, ssi1) & joins(ssi1, ssi2) & isPresentedBy(ssi2, ss2) -> connectsTo(ss1, ss2)
+	]
+
+}

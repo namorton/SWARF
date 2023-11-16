@@ -1,0 +1,127 @@
+description <http://mbda-systems.com/swarf/description/interfaces#> as interfaces {
+	
+	uses <http://mbda-systems.com/swarf/vocabulary/base#> as base
+	uses <http://mbda-systems.com/swarf/vocabulary/network_endpoint#> as nep
+	extends <http://mbda-systems.com/swarf/description/endpoints#> as endpoints 
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> PDLT 1
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_pdlt_1_interface : nep:Interface [
+		from endpoints:C2_PDLT_1_Endpoint
+		to endpoints:PDLT_1_C2_Endpoint
+		base:hasIdentifier "C2_PDLT_1_JN"
+		base:hasCanonicalName "C2 to PDLT 1 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance pdlt_1_c2_interface : nep:Interface [
+		from endpoints:PDLT_1_C2_Endpoint
+		to endpoints:C2_PDLT_1_Endpoint
+		base:hasIdentifier "PDLT_1_C2_JN"
+		base:hasCanonicalName "PDLT 1 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> PDLT 2
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_pdlt_2_interface : nep:Interface [
+		from endpoints:C2_PDLT_2_Endpoint
+		to endpoints:PDLT_2_C2_Endpoint
+		base:hasIdentifier "C2_PDLT_2_JN"
+		base:hasCanonicalName "C2 to PDLT 2 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance pdlt_2_c2_interface : nep:Interface [
+		from endpoints:PDLT_2_C2_Endpoint
+		to endpoints:C2_PDLT_2_Endpoint
+		base:hasIdentifier "PDLT_2_C2_JN"
+		base:hasCanonicalName "PDLT 2 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> LMS 1
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_lms_1_interface : nep:Interface [
+		from endpoints:C2_LMS_1_Endpoint
+		to endpoints:LMS_1_C2_Endpoint
+		base:hasIdentifier "C2_LMS_1_JN"
+		base:hasCanonicalName "C2 to LMS 1 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance lms_1_c2_interface : nep:Interface [
+		from endpoints:LMS_1_C2_Endpoint
+		to endpoints:C2_LMS_1_Endpoint
+		base:hasIdentifier "LMS_1_C2_JN"
+		base:hasCanonicalName "LMS 1 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> LMS 2
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_lms_2_interface : nep:Interface [
+		from endpoints:C2_LMS_2_Endpoint
+		to endpoints:LMS_2_C2_Endpoint
+		base:hasIdentifier "C2_LMS_2_JN"
+		base:hasCanonicalName "C2 to LMS 2 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance lms_2_c2_interface : nep:Interface [
+		from endpoints:LMS_2_C2_Endpoint
+		to endpoints:C2_LMS_2_Endpoint
+		base:hasIdentifier "LMS_2_C2_JN"
+		base:hasCanonicalName "LMS 2 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> LMS 3
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_lms_3_interface : nep:Interface [
+		from endpoints:C2_LMS_3_Endpoint
+		to endpoints:LMS_3_C2_Endpoint
+		base:hasIdentifier "C2_LMS_3_JN"
+		base:hasCanonicalName "C2 to LMS 3 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance lms_3_c2_interface : nep:Interface [
+		from endpoints:LMS_3_C2_Endpoint
+		to endpoints:C2_LMS_3_Endpoint
+		base:hasIdentifier "LMS_3_C2_JN"
+		base:hasCanonicalName "LMS 3 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2 <-> LMS 4
+	///////////////////////////////////////////////////////////////////////////
+
+	relation instance c2_lms_4_interface : nep:Interface [
+		from endpoints:C2_LMS_4_Endpoint
+		to endpoints:LMS_4_C2_Endpoint
+		base:hasIdentifier "C2_LMS_4_JN"
+		base:hasCanonicalName "C2 to LMS 4 Interface"
+		nep:isEncrypted false
+	]
+
+	relation instance lms_4_c2_interface : nep:Interface [
+		from endpoints:LMS_4_C2_Endpoint
+		to endpoints:C2_LMS_4_Endpoint
+		base:hasIdentifier "LMS_4_C2_JN"
+		base:hasCanonicalName "LMS 4 to C2 Interface"
+		nep:isEncrypted false
+	]
+
+}

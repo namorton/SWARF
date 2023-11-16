@@ -1,0 +1,49 @@
+description <http://mbda-systems.com/swarf/description/subsystems#> as subsystems {
+	
+	uses <http://mbda-systems.com/swarf/vocabulary/base#> as base
+	uses <http://mbda-systems.com/swarf/vocabulary/weapon_system#> as ws
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	
+	instance mpu : ws:C2 [
+		base:hasInstanceName "MPU"
+		base:hasInstanceIdentifier "1"^^xsd:positiveInteger
+
+	]
+	
+//	instance mpu_b : ws:C2 [
+//		base:hasIdentifier "MPU_B"
+//		base:hasCanonicalName "Main Processor Unit B"
+//	]
+
+	instance pdlt_1 : ws:PDLT [
+		base:hasInstanceName "PDLT"
+		base:hasInstanceIdentifier "1"^^xsd:positiveInteger
+	]
+
+	instance pdlt_2 : ws:PDLT [
+		base:hasInstanceName "PDLT"
+		base:hasInstanceIdentifier "2"^^xsd:positiveInteger
+	]
+
+	instance lms_1 : ws:LMS [
+		base:hasInstanceName "LMS"
+		base:hasInstanceIdentifier "1"^^xsd:positiveInteger
+	]
+
+	instance lms_2 : ws:LMS [
+		base:hasInstanceName "LMS"
+		base:hasInstanceIdentifier "2"^^xsd:positiveInteger
+	]
+
+	instance lms_3 : ws:LMS [
+		base:hasInstanceName "LMS"
+		base:hasInstanceIdentifier "3"^^xsd:positiveInteger
+	]
+
+	instance lms_4 : ws:LMS [
+		base:hasInstanceName "LMS"
+		base:hasInstanceIdentifier "4"^^xsd:positiveInteger
+	]
+
+}

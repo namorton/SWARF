@@ -1,0 +1,9 @@
+description bundle <http://mbda-systems.com/swarf/description/bundle#> as ^bundle {
+
+	uses <http://mbda-systems.com/swarf/vocabulary/bundle#>
+
+	includes <http://mbda-systems.com/swarf/description/endpoints#>
+	includes <http://mbda-systems.com/swarf/description/interfaces#>
+	includes <http://mbda-systems.com/swarf/description/subsystems#>
+
+}

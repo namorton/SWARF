@@ -1,0 +1,18 @@
+vocabulary <http://mbda-systems.com/swarf/vocabulary/weapon_system#> as weapon_system {
+
+	extends <http://mbda-systems.com/swarf/vocabulary/base#> as base
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	@rdfs:comment "A subsystem is a defined entity which is used to form a weapon system."
+	concept Subsystem < base:InstanceIdentifiedElement
+
+	@rdfs:comment "The C2 is the Command and Control subsystem of the Weapon System."
+	concept C2 < Subsystem
+
+	@rdfs:comment "The PDLT is the Platform Data Link Terminal subsystem of the Weapon System."
+	concept PDLT < Subsystem
+
+	@rdfs:comment "The LMS is the Launch Management subsystem of the Weapon System."
+	concept LMS < Subsystem
+
+}

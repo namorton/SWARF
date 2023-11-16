@@ -1,0 +1,15 @@
+PREFIX base:	<http://mbda-systems.com/swarf/vocabulary/base#>
+PREFIX ws:		<http://mbda-systems.com/swarf/vocabulary/weapon_system#>
+PREFIX nep:		<http://mbda-systems.com/swarf/vocabulary/network_endpoint#>
+
+SELECT DISTINCT ?ss1 ?ss1_name ?ss2_name ?ss1_instance ?ss2_instance
+WHERE {
+	?ss1 a ws:Subsystem ;
+		base:hasInstanceName ?ss1_name ;
+		base:hasInstanceIdentifier ?ss1_instance ;
+		nep:connectsTo [
+			base:hasInstanceName ?ss2_name ;
+			base:hasInstanceIdentifier ?ss2_instance ;
+		]
+}
+ORDER BY ?ss1_name ?ss_instance ?ss2_name

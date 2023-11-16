@@ -1,0 +1,204 @@
+description <http://mbda-systems.com/swarf/description/endpoints#> as endpoints {
+
+	uses <http://mbda-systems.com/swarf/vocabulary/base#> as base
+	uses <http://mbda-systems.com/swarf/vocabulary/network_endpoint#> as nep
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://mbda-systems.com/swarf/description/subsystems#> as subsystems
+
+	///////////////////////////////////////////////////////////////////////////
+	// C2
+	///////////////////////////////////////////////////////////////////////////
+
+	instance C2_PDLT_1_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_PDLT_1_IF"
+		base:hasCanonicalName "C2 to PDLT 1 Endpoint"
+		nep:localHostName "c2_pdlt_1"
+		nep:localPort "33000"^^xsd:positiveInteger
+		nep:remoteHostName "pdlt_1_c2"
+		nep:remotePort "33000"^^xsd:positiveInteger
+		nep:virtualLAN "10"^^xsd:positiveInteger
+	]
+
+	instance C2_PDLT_2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_PDLT_2_IF"
+		base:hasCanonicalName "C2 to PDLT 2 Endpoint"
+		nep:localHostName "c2_pdlt_2"
+		nep:localPort "33000"^^xsd:positiveInteger
+		nep:remoteHostName "pdlt_2_c2"
+		nep:remotePort "33000"^^xsd:positiveInteger
+		nep:virtualLAN "10"^^xsd:positiveInteger
+	]
+
+	instance C2_LMS_1_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_LMS_1_IF"
+		base:hasCanonicalName "C2 to LMS 1 Endpoint"
+		nep:localHostName "c2_lms_1"
+		nep:remoteHostName "lms_1_c2"
+		nep:virtualLAN "21"^^xsd:positiveInteger
+	]
+
+	instance C2_LMS_2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_LMS_2_IF"
+		base:hasCanonicalName "C2 to LMS 2 Endpoint"
+		nep:localHostName "c2_lms_2"
+		nep:remoteHostName "lms_2_c2"
+		nep:virtualLAN "22"^^xsd:positiveInteger
+	]
+
+	instance C2_LMS_3_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_LMS_3_IF"
+		base:hasCanonicalName "C2 to LMS 3 Endpoint"
+		nep:localHostName "c2_lms_3"
+		nep:remoteHostName "lms_3_c2"
+		nep:virtualLAN "23"^^xsd:positiveInteger
+		
+	]
+
+	instance C2_LMS_4_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "C2_LMS_4_IF"
+		base:hasCanonicalName "C2 to LMS 4 Endpoint"
+		nep:localHostName "c2_lms_4"
+		nep:remoteHostName "lms_4_c2"
+		nep:virtualLAN "24"^^xsd:positiveInteger
+		
+	]
+
+	relation instance  mpu_a.presents.C2_PDLT_1_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_PDLT_1_Endpoint
+	]
+
+	relation instance  mpu_a.presents.C2_PDLT_2_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_PDLT_2_Endpoint
+	]
+
+	relation instance  mpu_a.presents.C2_LMS_1_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_LMS_1_Endpoint
+	]
+
+	relation instance  mpu_a.presents.C2_LMS_2_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_LMS_2_Endpoint
+	]
+
+	relation instance  mpu_a.presents.C2_LMS_3_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_LMS_3_Endpoint
+	]
+
+	relation instance  mpu_a.presents.C2_LMS_4_Endpoint : nep:Presents [
+		from subsystems:mpu
+		to C2_LMS_4_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// PDLT 1
+	///////////////////////////////////////////////////////////////////////////
+
+	instance PDLT_1_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "PDLT_1_C2_IF"
+		base:hasCanonicalName "PDLT 1 to C2 Endpoint"
+		nep:localHostName "pdlt_1_c2"
+		nep:localPort "33000"^^xsd:positiveInteger
+		nep:remoteHostName "c2_pdlt_1"
+		nep:remotePort "33000"^^xsd:positiveInteger
+	]
+
+	relation instance  pdlt_1.presents.C2_PDLT_1_Endpoint : nep:Presents [
+		from subsystems:pdlt_1
+		to PDLT_1_C2_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// PDLT 2
+	///////////////////////////////////////////////////////////////////////////
+
+	instance PDLT_2_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "PDLT_2_C2_IF"
+		base:hasCanonicalName "PDLT 2 to C2 Endpoint"
+		nep:localHostName "pdlt_2_c2"
+		nep:localPort "33000"^^xsd:positiveInteger
+		nep:remoteHostName "c2_pdlt_2"
+		nep:remotePort "33000"^^xsd:positiveInteger
+	]
+
+	relation instance  pdlt_2.presents.PDLT_2_C2_Endpoint : nep:Presents [
+		from subsystems:pdlt_2
+		to PDLT_2_C2_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// LMS 1
+	///////////////////////////////////////////////////////////////////////////
+
+	instance LMS_1_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "LMS_1_C2_IF"
+		base:hasCanonicalName "LMS 1 to C2 Endpoint"
+		nep:localHostName "lms_1_c2"
+		nep:localPort "32001"^^xsd:positiveInteger
+		nep:remoteHostName "c2_lms_1"
+		nep:remotePort "32000"^^xsd:positiveInteger
+	]
+
+	relation instance  lms_1.presents.LMS_1_C2_Endpoint : nep:Presents [
+		from subsystems:lms_1
+		to LMS_1_C2_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// LMS 2
+	///////////////////////////////////////////////////////////////////////////
+
+	instance LMS_2_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "LMS_2_C2_IF"
+		base:hasCanonicalName "LMS 2 to C2 Endpoint"
+		nep:localHostName "lms_2_c2"
+		nep:localPort "32001"^^xsd:positiveInteger
+		nep:remoteHostName "c2_lms_2"
+		nep:remotePort "32000"^^xsd:positiveInteger
+	]
+
+	relation instance  lms_1.presents.LMS_2_C2_Endpoint : nep:Presents [
+		from subsystems:lms_2
+		to LMS_2_C2_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// LMS 3
+	///////////////////////////////////////////////////////////////////////////
+
+	instance LMS_3_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "LMS_3_C2_IF"
+		base:hasCanonicalName "LMS 3 to C2 Endpoint"
+		nep:localHostName "lms_3_c2"
+		nep:localPort "32001"^^xsd:positiveInteger
+		nep:remoteHostName "c2_lms_3"
+		nep:remotePort "32000"^^xsd:positiveInteger
+	]
+
+	relation instance  lms_3.presents.LMS_3_C2_Endpoint : nep:Presents [
+		from subsystems:lms_3
+		to LMS_3_C2_Endpoint
+	]
+
+	///////////////////////////////////////////////////////////////////////////
+	// LMS 4
+	///////////////////////////////////////////////////////////////////////////
+
+	instance LMS_4_C2_Endpoint : nep:NetworkEndpoint [
+		base:hasIdentifier "LMS_4_C2_IF"
+		base:hasCanonicalName "LMS 4 to C2 Endpoint"
+		nep:localHostName "lms_4_c2"
+		nep:localPort "32001"^^xsd:positiveInteger
+		nep:remoteHostName "c2_lms_4"
+		nep:remotePort "32000"^^xsd:positiveInteger
+	]
+
+	relation instance  lms_4.presents.LMS_4_C2_Endpoint : nep:Presents [
+		from subsystems:lms_4
+		to LMS_4_C2_Endpoint
+	]
+
+}
