@@ -1,2 +1,2 @@
-# swarf
+# SWARF
 Software Architecture Framework
